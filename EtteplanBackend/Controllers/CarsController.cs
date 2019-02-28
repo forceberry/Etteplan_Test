@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EtteplanBackend.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,11 +12,19 @@ namespace EtteplanBackend.Controllers
     [ApiController]
     public class CarsController : ControllerBase
     {
+
+        private readonly IRepository _repo;
+
+        public CarsController(Repository repo)
+        {
+            _repo = repo;
+        }
+
         // GET: api/Cars
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            return Ok(_repo.Get());
         }
 
         // GET: api/Cars/5
@@ -27,7 +36,7 @@ namespace EtteplanBackend.Controllers
 
         // POST: api/Cars
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Car car)
         {
         }
 
@@ -41,6 +50,14 @@ namespace EtteplanBackend.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+
+        [HttpGet, Route("seed")]
+        public string CreateSeed()
+        {
+            var seed = new SeedCarData();
+            seed.CreateSeedCars();
+            return "Seed created";
         }
     }
 }
