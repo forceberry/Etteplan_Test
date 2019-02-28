@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtteplanBackend", "EtteplanBackend\EtteplanBackend.csproj", "{0A1EDAB1-EAA3-4966-B840-87FC15A7221A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A1EDAB1-EAA3-4966-B840-87FC15A7221A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A1EDAB1-EAA3-4966-B840-87FC15A7221A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A1EDAB1-EAA3-4966-B840-87FC15A7221A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A1EDAB1-EAA3-4966-B840-87FC15A7221A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A0AA7B4-10FF-4F75-8B8A-AC4D3E60D070}
+	EndGlobalSection
+EndGlobal
